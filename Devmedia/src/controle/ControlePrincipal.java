@@ -14,7 +14,7 @@ public class ControlePrincipal implements Serializable {
 
 	public ControlePrincipal (){
 		
-		mensagem = "Bem vindo a sua primeira aplicação com JSF2";
+		mensagem = "Nova Mensagem";
 		
 	}
 
