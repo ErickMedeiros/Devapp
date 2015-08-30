@@ -3,17 +3,13 @@ package controle;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.RequestScoped;
-//import javax.faces.bean.SessionScoped;
+import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name = "controlePrincipal")
-@ApplicationScoped()
-
+@SessionScoped
 public class ControlePrincipal implements Serializable {
-	
+
 	private String mensagem;
 
 	public ControlePrincipal() {
@@ -23,6 +19,28 @@ public class ControlePrincipal implements Serializable {
 
 	}
 
+	public String sobre() {
+		mensagem = "Você foi redirecionado de maneira dinâmica...";
+		return "sobre";
+	}
+
+	public String sobreRedirecionado() {
+		mensagem = "Você está na página de Sobre Redirecionado...";
+		return "sobre?faces-redirect=true";
+	}
+
+	public String geraErro() {
+		return "erro";
+	}
+
+	public String geraErroGrave() {
+		return "erro";
+	}
+
+	public String geraLogin() {
+		return "login";
+	}
+
 	public String getMensagem() {
 		return mensagem;
 	}
@@ -30,5 +48,5 @@ public class ControlePrincipal implements Serializable {
 	public void setMensagem(String mensagem) {
 		this.mensagem = mensagem;
 	}
-	
+
 }

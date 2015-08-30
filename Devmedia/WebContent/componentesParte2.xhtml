@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Componentes para Saída para Textos e Imagens</title>
+</h:head>
+<h:body>
+	<h:form id="formulario" prependId="false">
+		<h:commandButton value="Gerar Texto" 
+		action="#{controleComponentes.geraTexto()}" id="btnGerar" />
+		<h:commandLink action="#{controleComponentes.geraTexto}"> 
+		<h:graphicImage library="images" name="jsf-logo.png"/>
+		</h:commandLink>
+	</h:form>
+	<h:outputFormat value="Eu moro em {0}, {1}">
+		<f:param value="Araripina" />
+		<f:param value="Pernambuco" />
+	</h:outputFormat>
+	
+	<h:graphicImage url="/resources/images/jsf-logo.png"/>
+	<h:graphicImage value="#{resource['images:jsf-logo.png']}" />
+</h:body>
+</html>
