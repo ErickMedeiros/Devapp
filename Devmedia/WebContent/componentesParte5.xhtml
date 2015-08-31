@@ -23,13 +23,16 @@
 				id="obs" />
 			<h:outputLabel value="Grau de Instrução:" for="grau" />
 			<h:selectOneRadio  value="#{controleEntrada.grauInstrucao}" id="grau" layout="pageDirection">
-				<!--f:selectItem itemLabel="Selecione o Grau de Instrução" noSelectionOption="true"/-->
+				<f:selectItems var="item" value="#{controleEntrada.grausInstrucao}"
+					itemValue="#{item}" itemLabel="#{item}"/>
+			<!--f:selectItem itemLabel="Selecione o Grau de Instrução" noSelectionOption="true"/-->
 				<!--f:selectItem itemLabel="Ensino Fundamental" itemValue="Ensino Fundamental"/>
 				<f:selectItem itemLabel="Ensino Médio" itemValue="Ensino Médio"/>
 				<f:selectItem itemLabel="Ensino Superior" itemValue="Ensino Superior"/>
 				<f:selectItem itemLabel="Pós-graduação" itemValue="Pós-graduação"/> -->
+				<!--h:selectOneRadio  value="#{controleEntrada.grauInstrucao}" id="grau" layout="pageDirection">
 				<f:selectItems var="item" value="#{controleEntrada.grausInstrucao}"
-					itemValue="#{item}" itemLabel="#{item}"/>
+					itemValue="#{item}" itemLabel="#{item}"/> -->		
 			</h:selectOneRadio>
 			<h:column>
 				<div>
