@@ -22,9 +22,28 @@
 			<h:inputTextarea value="#{controleEntrada.obs}" cols="38" rows="6"
 				id="obs" />
 			<h:outputLabel value="Grau de Instrução:" for="grau" />
-			<h:selectOneRadio  value="#{controleEntrada.grauInstrucao}" id="grau" layout="pageDirection">
+			<h:selectOneListbox value="#{controleEntrada.grauInstrucao}" id="grau">
 				<f:selectItems var="item" value="#{controleEntrada.grausInstrucao}"
 					itemValue="#{item}" itemLabel="#{item}"/>
+			</h:selectOneListbox>
+			<h:outputLabel value="Tecnologias :" for="tec" />
+			<h:selectManyListbox value="#{controleEntrada.selecionadas}" id="tec">
+				<f:selectItems var="item" value="#{controleEntrada.tecnologias}"
+					itemValue="#{item}" itemLabel="#{item}"/>
+			</h:selectManyListbox>
+			
+			<!-- h:outputLabel value="Tecnologias :" for="tec" />
+			<h:selectManyCheckbox value="#{controleEntrada.selecionadas}" id="tec">
+				<f:selectItems var="item" value="#{controleEntrada.tecnologias}"
+					itemValue="#{item}" itemLabel="#{item}"/>
+			</h:selectManyCheckbox>-->
+			
+			<!-- h:selectOneListbox value="#{controleEntrada.grauInstrucao}" id="grau">
+				<f:selectItems var="item" value="#{controleEntrada.grausInstrucao}"
+					itemValue="#{item}" itemLabel="#{item}"/>
+			</h:selectOneListbox>-->
+					
+					
 			<!--f:selectItem itemLabel="Selecione o Grau de Instrução" noSelectionOption="true"/-->
 				<!--f:selectItem itemLabel="Ensino Fundamental" itemValue="Ensino Fundamental"/>
 				<f:selectItem itemLabel="Ensino Médio" itemValue="Ensino Médio"/>
@@ -33,7 +52,6 @@
 				<!--h:selectOneRadio  value="#{controleEntrada.grauInstrucao}" id="grau" layout="pageDirection">
 				<f:selectItems var="item" value="#{controleEntrada.grausInstrucao}"
 					itemValue="#{item}" itemLabel="#{item}"/> -->		
-			</h:selectOneRadio>
 			<h:column>
 				<div>
 					<h:commandButton action="#{controleEntrada.processa()}"
