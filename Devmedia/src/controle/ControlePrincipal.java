@@ -18,6 +18,10 @@ public class ControlePrincipal implements Serializable {
 				+ sdf.format(Calendar.getInstance().getTime());
 
 	}
+	
+	public String componentes5(){
+		return "componentesParte5";
+	}
 
 	public String sobre() {
 		mensagem = "Você foi redirecionado de maneira dinâmica...";
