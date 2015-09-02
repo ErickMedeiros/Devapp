@@ -10,7 +10,7 @@
 <h:body>
 	<h:form id="formulario">
 		<h:messages />
-		<h:panelGroup rendered="#{controlePessoa.opcaoSelecionada == falso}">
+		<h:panelGroup rendered="#{controlePessoa.opcaoSelecionada == false}">
 		Selecione o tipo de pessoa
 			<h:selectOneRadio value="#{controlePessoa.pessoaFisica}"
 				layout="lineDirection" onchange="submit()"
@@ -24,10 +24,9 @@
 			<h:panelGrid columns="2">
 			
 			<h:outputLabel value="ID" />
-			
 			<h:inputText value="#{controlePessoa.id}" />
-			<h:outputLabel value="Nome" rendered="#{controlePessoa.pessoaFisica == true}"/>
 			
+			<h:outputLabel value="Nome" rendered="#{controlePessoa.pessoaFisica == true}"/>
 			<h:outputLabel value="Razão Social"  rendered="#{controlePessoa.pessoaFisica == false}"/>
 			<h:inputText value="#{controlePessoa.nome}" size="40"/>
 			
