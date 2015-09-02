@@ -22,7 +22,8 @@ public class ControlePrincipal implements Serializable {
 	public String componentes5(){
 		return "componentesParte5";
 	}
-
+	
+	
 	public String sobre() {
 		mensagem = "Você foi redirecionado de maneira dinâmica...";
 		return "sobre";

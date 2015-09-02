@@ -24,6 +24,10 @@ public class ControlePessoa implements Serializable {
 		opcaoSelecionada = false;
 	}
 
+	// Metódo Captura o estado de mudança de valor, Pessoa Física ou Jurídica,
+	// ou seja,
+	// submeter o formulário de forma automática
+	// capturando o evento
 	public void tipoChange(ValueChangeEvent e) {
 		pessoaFisica = (Boolean) e.getNewValue();
 		selecionar();
@@ -31,6 +35,8 @@ public class ControlePessoa implements Serializable {
 	}
 
 	public String selecionar() {
+		// metódo que seleciona o que o usuário vai fazer, escolher Pessoa
+		// Física ou Jurídica
 		opcaoSelecionada = true;
 		String selecao = pessoaFisica == true ? "Pessoa Física"
 				: "Pessoa Jurídica";
@@ -39,6 +45,7 @@ public class ControlePessoa implements Serializable {
 		return "formPessoa";
 	}
 
+	// metódo para exibir dados que vai retorna para o form Dados pessoas
 	public String exibirDados() {
 		saida = "";
 		saida += "Valores recebidos:";
@@ -51,6 +58,7 @@ public class ControlePessoa implements Serializable {
 
 	}
 
+	// Metódo para retornar a tela anterior para indersão de novos dados
 	public String voltar() {
 		opcaoSelecionada = false;
 		id = null;
