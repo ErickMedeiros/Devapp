@@ -35,7 +35,7 @@ public class ControlePessoa implements Serializable {
 	}
 
 	public String selecionar() {
-		// metódo que seleciona o que o usuário vai fazer, escolher Pessoa
+		// método que seleciona o que o usuário vai fazer, escolher Pessoa
 		// Física ou Jurídica
 		opcaoSelecionada = true;
 		String selecao = pessoaFisica == true ? "Pessoa Física"
@@ -45,7 +45,7 @@ public class ControlePessoa implements Serializable {
 		return "formPessoa";
 	}
 
-	// metódo para exibir dados que vai retorna para o form Dados pessoas
+	// método para exibir dados que vai retorna para o form Dados pessoas
 	public String exibirDados() {
 		saida = "";
 		saida += "Valores recebidos:";
@@ -58,7 +58,7 @@ public class ControlePessoa implements Serializable {
 
 	}
 
-	// Metódo para retornar a tela anterior para indersão de novos dados
+	// Método para retornar a tela anterior para inserção de novos dados
 	public String voltar() {
 		opcaoSelecionada = false;
 		id = null;

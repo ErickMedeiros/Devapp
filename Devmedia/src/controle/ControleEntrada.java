@@ -25,9 +25,9 @@ public class ControleEntrada implements Serializable {
 
 		id = 1;
 		grausInstrucao.add("Ensino Fundamental");
-		grausInstrucao.add("Ensino Médio");
+		grausInstrucao.add("Ensino MÃ©dio");
 		grausInstrucao.add("Ensino Superior");
-		grausInstrucao.add("Pós-graduação");
+		grausInstrucao.add("PÃ³s-graduaÃ§Ã£o");
 		tecnologias.add("JPA ");
 		tecnologias.add("JSF2 ");
 		tecnologias.add("HIBERNAT ");
@@ -41,7 +41,7 @@ public class ControleEntrada implements Serializable {
 		saida += "Nome: " + nome + "<br/>";
 		saida += "Senha: " + senha + "<br/>";
 		saida += "Obs: " + obs + "<br/>";
-		saida += "Instrução: " + grauInstrucao + "<br/>";
+		saida += "InstruÃ§Ã£o: " + grauInstrucao + "<br/>";
 		saida += "Tecnologias :";
 		for (String s: selecionadas){
 			saida += s + ":";

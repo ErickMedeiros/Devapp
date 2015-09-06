@@ -30,7 +30,7 @@ public class ControleComponentes implements Serializable {
 
 	public void listener(ActionEvent event) {
 		UIComponent source = event.getComponent();
-		idComponente = "Componente que executou a ação:" + source.getId();
+		idComponente = "Componente que executou a aÃ§Ã£o:" + source.getId();
 	}
 
 	public String getTexto() {
