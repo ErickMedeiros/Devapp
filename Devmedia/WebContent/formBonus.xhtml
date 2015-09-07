@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title></title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:panelGrid>
+			<h:outputLabel value="Nome" />
+			<h:inputText value="#{controleBonus.nome}" />
+			<h:outputLabel value="Salário" />
+			<h:inputText value="#{controleBonus.salario}" />
+			<h:outputLabel value="Cargo" />
+			<h:selectOneMenu value="#{controleBonus.cargo}">
+				<f:selectItem itemLabel="Analista" itemValue="0" />
+				<f:selectItem itemLabel="Programador" itemValue="1" />
+				<f:selectItem itemLabel="Gerente" itemValue="2" />
+			</h:selectOneMenu>
+		</h:panelGrid>
+		<h:commandButton value="Calcular"
+			action="#{controleBonus.dadosBonus()}" id="btnCalcular" />
+
+	</h:form>
+</h:body>
+</html>
