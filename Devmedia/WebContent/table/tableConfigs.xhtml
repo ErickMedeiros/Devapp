@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head><title>Tabelas com DataTables</title></h:head> 
+<h:body> 
+		<h:dataTable var="obj" value="#{controleTabela.lista}" border="1"
+		cellpadding="6" cellspacing="0" dir="ltr" first="0" rows="4" frame="box"
+		rules="cols">
+		<f:facet name="caption">Tabelas de Pessoas</f:facet>
+		<f:facet name="header">Listagem de Pessoas</f:facet>
+		<f:facet name="footer">Total de Registros: #{controleTabela.lista.size()}</f:facet>
+		<h:column>#{obj.id_Pessoa}</h:column>
+		<h:column>#{obj.nome_Pessoa}</h:column>
+		<h:column>#{obj.fone_Pessoa}</h:column>
+		
+		</h:dataTable>
+</h:body> 
+</html>

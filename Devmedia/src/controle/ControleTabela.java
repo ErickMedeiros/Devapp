@@ -24,7 +24,15 @@ public class ControleTabela implements Serializable {
 		lista.add(new Pessoa(4, "Lilian Medeiros", "87-99183-2902"));
 	}
 	
+	public String salvar(){
+		for (Pessoa obg:lista)obg.setEditando_Pessoa(false);
+		return null;
+	}
 	
+	public String excluir(Pessoa obj){
+		lista.remove(obj);
+		return null;
+	}
 	
 	public List<Pessoa> getLista() {
 		return lista;

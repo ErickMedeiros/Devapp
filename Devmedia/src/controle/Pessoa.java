@@ -2,14 +2,12 @@ package controle;
 
 import java.io.Serializable;
 
-
-
-
 public class Pessoa implements Serializable{
 
 	private Integer Id_Pessoa;
 	private String nome_Pessoa;
 	private String fone_Pessoa;
+	private Boolean editando_Pessoa;
 	
 	
 	public Pessoa(){
@@ -21,6 +19,7 @@ public class Pessoa implements Serializable{
 				 this.Id_Pessoa = Id_Pessoa;
 				 this.nome_Pessoa = nome_Pessoa;
 				 this.fone_Pessoa = fone_Pessoa;
+				 
 				 
 				 
 	}
@@ -49,7 +48,14 @@ public class Pessoa implements Serializable{
 		this.fone_Pessoa = fone_Pessoa;
 	}
 
-}
+	public Boolean getEditando_Pessoa() {
+		return editando_Pessoa;
+	}
 
+	public void setEditando_Pessoa(Boolean editando_Pessoa) {
+		this.editando_Pessoa = editando_Pessoa;
+	}
+
+}
 
 	
