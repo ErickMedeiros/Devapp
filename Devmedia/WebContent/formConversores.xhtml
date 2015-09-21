@@ -15,6 +15,11 @@
 			<h:inputText value="#{controleCoversor.nascimento}">
 				<f:converter converterId="converterCalendar" />
 			</h:inputText>
+			<h:outputLabel value="Cidade" />
+			<h:selectOneMenu value="#{controleCoversor.cidade}"
+			converter="#{controleCoversor.converterCidade}">
+			<f:selectItems value="#{controleCoversor.listaCidades}"/>
+			</h:selectOneMenu>	
 			<f:facet name="footer">
 				<h:commandButton value="Enviar" action="#{controleCoversor.lerDados()}"/>
 			</f:facet>
