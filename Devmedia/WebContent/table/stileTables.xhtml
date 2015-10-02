@@ -4,20 +4,19 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
 
-<h:head>
-	<title>Tabelas com Estilos CSS</title>
-	<h:outputStylesheet library="css" name="estilo.css" />
-</h:head>
-<h:body>
-
-	<h:dataTable var="obj" value="#{controleTabela.lista}" captionClass="tituloTabela"
-	styleClass="tabela" headerClass="tabelaCabecalho" footerClass="tabelaRodape">
-		<f:facet name="caption">Tabelas de Pessoas</f:facet>
-		<f:facet name="header">Listagem de Pessoas</f:facet>
-		<f:facet name="footer">Total de Registros: #{controleTabela.lista.size()}</f:facet>
-		<h:column>#{obj.id_Pessoa}</h:column>
-		<h:column>#{obj.nome_Pessoa}</h:column>
-		<h:column>#{obj.fone_Pessoa}</h:column>
-	</h:dataTable>
-</h:body>
+<ui:composition template="/templates/template.xhtml">
+	<ui:define name="tituloPagina">Estilo de Tabelas</ui:define>
+	<ui:define name="conteudo">
+		<h:dataTable var="obj" value="#{controleTabela.lista}"
+			captionClass="tituloTabela" styleClass="tabela"
+			headerClass="tabelaCabecalho" footerClass="tabelaRodape">
+			<f:facet name="caption">Tabelas de Pessoas</f:facet>
+			<f:facet name="header">Listagem de Pessoas</f:facet>
+			<f:facet name="footer">Total de Registros: #{controleTabela.lista.size()}</f:facet>
+			<h:column>#{obj.id_Pessoa}</h:column>
+			<h:column>#{obj.nome_Pessoa}</h:column>
+			<h:column>#{obj.fone_Pessoa}</h:column>
+		</h:dataTable>
+	</ui:define>
+</ui:composition>
 </html>

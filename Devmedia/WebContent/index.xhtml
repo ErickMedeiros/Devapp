@@ -3,34 +3,12 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
-<f:view encoding="ISO-8859-1" contentType="text/html">
+	
 
-<h:head><title>Java Sever Faces</title></h:head> 
-<body> 
-	<h:outputLabel value="#{controlePrincipal.mensagem}"/><br/>
-	<h:form>
-	<h:commandLink action="sobre" value="Sobre com Navegação Estática..." /><br/>
-	<h:commandLink action="#{controlePrincipal.sobre()}" value="Sobre com Navegação Dinâmica..." /><br/>
-	<h:commandLink action="#{controlePrincipal.sobreRedirecionado()}" value="Sobre com Navegação Redirecionada..." /><br/>
-	<h:commandLink action="#{controlePrincipal.geraLogin()}" value="Página de Login..." /><br/>
-	<h:commandLink action="#{controlePrincipal.geraErro()}" value="Página de Erro..." /><br/>
-	<h:commandLink action="#{controlePrincipal.geraErroGrave()}" value="Página de Erro Grave..." /><br/>
-	<h:commandLink action="#{controlePrincipal.componentes5()}" value="Componentes 5..." /><br/>
-	<h:commandLink action="formPessoa" value="Entrada de Pessoa" /><br/>
-	<h:commandLink action="formBonus" value="Calculo de Bônus" /><br/>
-	<h:commandLink action="table\tableRepeat" value="Tabela de Repetição" /><br/>
-	<h:commandLink action="table\tableSimple" value="Tabela Simples" /><br/>
-	<h:commandLink action="table\tableConfigs" value="Tabelas com DataTable" /><br/>
-	<h:commandLink action="table\stileTables" value="Estilos de Tabelas" /><br/>
-	<h:commandLink action="table\tableStileline" value="Tabela Estilo Linhas" /><br/>
-	<h:commandLink action="table\tableEdit" value="Editar Dados" /><br/>
-	<h:commandLink action="formValidacao" value="Validação de Dados" /><br/>
-	<h:commandLink action="formUser" value="Formulário de Usuário" /><br/>
-	<h:commandLink action="formPagamento" value="Formulário de Pagamento" /><br/>
-	<h:commandLink action="formConversores" value="Formulário de Conversores" /><br/>
-	</h:form>
-	
-	
-</body> 
-</f:view>
+<ui:composition template="/templates/template.xhtml">
+				<ui:define name="tituloJanela">Sistema JEE com JSF2.0 E Facelets</ui:define>
+				<ui:define name="conteudo"> Seja bem vindo ao Sistema!!!</ui:define>
+				
+	</ui:composition>
+
 </html>

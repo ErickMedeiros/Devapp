@@ -74,3 +74,35 @@
 	background: aqua;
 }
 
+.tituloJanela{
+	font-size: 1.4em;
+	font-family: Palatino;
+	font-style: negrit;
+	text-align: center;	
+}
+
+#cabecalho{
+	padding: 20px;
+	height: 30px;
+	margin-bottom: 10px;
+	background: #dddddd;
+	border: 1px solid darkGray;
+}
+
+#barraEsquerda{
+	border: thin solid lightGray;
+	padding: 30px;
+	width: 138px;
+	background: #eeeeee;
+}
+
+#conteudo{
+	padding: 10px;
+	border: thin solid lightGray;
+	background: fefeef;
+	position: absolute;
+	right: 10px;
+	left: 210px;
+	height: 400px;
+	top: 90px;
+}
