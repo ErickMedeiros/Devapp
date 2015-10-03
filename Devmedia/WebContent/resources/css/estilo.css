@@ -91,18 +91,18 @@
 
 #barraEsquerda{
 	border: thin solid lightGray;
-	padding: 30px;
-	width: 138px;
+	padding: 5px;
+	width: 150px;
 	background: #eeeeee;
 }
 
 #conteudo{
-	padding: 10px;
+	padding: 5px;
 	border: thin solid lightGray;
 	background: fefeef;
 	position: absolute;
-	right: 10px;
-	left: 210px;
+	right: 8px;
+	left: 180px;
 	height: 400px;
 	top: 90px;
 }
