@@ -4,18 +4,18 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:compo="http://java.sun.com/jsf/composite/compo">
-	
-	<compo:linkImagem biblioteca="images" imagem="home.png"
-	acao="#{controlePrincipal.home()}" />
-	
+
+
+
 <h:form>
 	<h:panelGrid columns="1">
-		
-		
-		<h:commandLink action="/index" value="HOME" />
+
+		<compo:linkImagem biblioteca="images" imagem="home.png"
+			acao="#{controlePrincipal.home()}" />
 		<br />
-		<h:commandLink action="/novoComponente"
-			value="Novo Componente" />
+		<h:commandLink action="/viewAjax" value="Ajax" />
+		<br />
+		<h:commandLink action="/novoComponente" value="Novo Componente" />
 		<br />
 		<h:commandLink action="/table/tabelaEditavel"
 			value="Nova Tabela Editável" />
