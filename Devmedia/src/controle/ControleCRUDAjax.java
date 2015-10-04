@@ -11,16 +11,13 @@ import model.Pessoa;
 
 @ManagedBean(name="controleCRUDAjax")
 @ViewScoped
-public class ControleCRUDAjax implements Serializable{
-
+public class ControleCRUDAjax implements Serializable {
 	private List<Pessoa> lista = new ArrayList<Pessoa>();
 	private Pessoa objeto;
 	private Boolean editando;
 	
-	
 	public ControleCRUDAjax(){
 		editando = false;
-		
 	}
 	
 	public String listar(){
@@ -44,6 +41,7 @@ public class ControleCRUDAjax implements Serializable{
 		editando = false;
 	}
 	
+	
 	public void alterar(Pessoa obj){
 		objeto = obj;
 		editando = true;
@@ -52,22 +50,27 @@ public class ControleCRUDAjax implements Serializable{
 	public void excluir(Pessoa obj){
 		lista.remove(obj);
 	}
-	
+
 	public List<Pessoa> getLista() {
 		return lista;
 	}
+
 	public void setLista(List<Pessoa> lista) {
 		this.lista = lista;
 	}
+
 	public Pessoa getObjeto() {
 		return objeto;
 	}
+
 	public void setObjeto(Pessoa objeto) {
 		this.objeto = objeto;
 	}
+
 	public Boolean getEditando() {
 		return editando;
 	}
+
 	public void setEditando(Boolean editando) {
 		this.editando = editando;
 	}
