@@ -15,7 +15,7 @@
 					frame="box" rules="all" cellpadding="3">
 					<f:facet name="header">
 						<h:commandButton action="#{controleCRUDAjax.novo()}" value="Novo Registro">
-							<f:ajax execute="@form" render="@form" />
+							<!--  <f:ajax execute="@form" render="@form" />-->
 						</h:commandButton>
 					</f:facet>
 					<h:column>
@@ -34,7 +34,7 @@
 						<f:facet name="header">Alterar</f:facet>
 						<h:commandLink value="Alterar"
 							action="#{controleCRUDAjax.alterar(obj)}">
-							<f:ajax render="@form" execute="@form" />
+							<!--  <f:ajax execute="@form" render="@form" />-->
 						</h:commandLink>
 					</h:column>
 					<h:column>
@@ -42,7 +42,7 @@
 						<h:commandLink value="Excluir"
 							action="#{controleCRUDAjax.excluir(obj)}"
 							onclick="if (!confirm('Confirme a exclusão do Registro?')) return false">
-							<f:ajax execute="@form" render="@form" />
+							<!--  <f:ajax execute="@form" render="@form" />-->
 						</h:commandLink>
 					</h:column>
 
@@ -57,11 +57,11 @@
 						<div align="center">
 							<h:commandButton action="#{controleCRUDAjax.cancelar()}"
 								value="Cancelar" immediate="true">
-								<f:ajax execute="@form" render="@form" />
+								<!--  <f:ajax execute="@form" render="@form" />-->
 							</h:commandButton>
 							<h:commandButton action="#{controleCRUDAjax.salvar()}"
 								value="Salvar">
-								<f:ajax execute="" render="" />
+								<!--  <f:ajax execute="@form" render="@form" />-->
 							</h:commandButton>
 						</div>
 					</f:facet>

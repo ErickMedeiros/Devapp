@@ -13,7 +13,7 @@ public class ControlePrincipal implements Serializable {
 	private String mensagem;
 	
 	public String home(){
-		return "/index";
+		return "/index.xhtml";
 	}
 
 	public ControlePrincipal() {
