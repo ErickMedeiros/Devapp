@@ -3,10 +3,11 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
-
+<f:view contentType="text/html" locale="#{controleLocale.currentLocale}" encoding="ISO-8859-1">
 <h:head>
 <title><ui:insert name="tituloJanela"/></title>
 <h:outputStylesheet library="css" name="estilo.css"/>
+
 </h:head> 
 <h:body> 
 		<div id="cabecalho">
@@ -24,4 +25,5 @@
 		
 		</div>
 </h:body>
+</f:view>
 </html>
