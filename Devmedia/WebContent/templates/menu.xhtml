@@ -13,14 +13,16 @@
 		<compo:linkImagem biblioteca="images" imagem="home.png"
 			acao="#{controlePrincipal.home()}" />
 		<br />
-		<h:commandLink action="#{controleCRUDAjax.listar()}" value="CRUD com Ajax" />
+		<h:commandLink action="/index" value="#{msgs['menu.home']}" />
+		<br />		
+		<h:commandLink action="/crudAjax" value="#{msgs['menu.crudAjax']}" />
 		<br />
-		<h:commandLink action="/viewAjax" value="Ajax" />
+		<h:commandLink action="/viewAjax" value="#{msgs['menu.viewAjax']}" />
 		<br />
-		<h:commandLink action="/novoComponente" value="Novo Componente" />
+		<h:commandLink action="/novoComponente" value="#{msgs['menu.novoComponente']}" />
 		<br />
 		<h:commandLink action="/table/tabelaEditavel"
-			value="Nova Tabela Editável" />
+			value="#{msgs['menu.tabelaEditavel']}" />
 		<br />
 		<h:commandLink action="#{controleLocale.portugueseLocale()}"
 			value="Portuguese" />
